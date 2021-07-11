@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/appengine/aetest"
-	"google.golang.org/appengine/user"
+	"google.golang.org/appengine/v2/aetest"
+	"google.golang.org/appengine/v2/user"
 )
 
 func TestHandlers(t *testing.T) {
