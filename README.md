@@ -1,0 +1,1 @@
+# GAE/Go Compatibility Check
