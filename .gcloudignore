@@ -1,0 +1,6 @@
+.editorconfig
+.gcloudignore
+.git
+.github
+.gitignore
+#!include:.gitignore
