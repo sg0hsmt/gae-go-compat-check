@@ -1,0 +1,40 @@
+name: test
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - master
+      - main
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    name: test
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: setup go
+        uses: actions/setup-go@v2
+        with:
+          go-version: "1.x"
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "2.7.x"
+
+      - name: setup gcloud
+        uses: google-github-actions/setup-gcloud@v0.2.1
+
+      - name: disable gcloud prompts
+        run: gcloud config set disable_prompts true
+
+      - name: install components
+        run: gcloud components install app-engine-go
+
+      - name: go test
+        run: go test ./...
