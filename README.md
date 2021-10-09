@@ -22,14 +22,14 @@ gcloud app deploy --project ${YOUR_PROJECT} queue.yaml
 Deploy (Go 1.15)
 
 ```console
-gcloud app deploy --project ${YOUR_PROJECT} app_go115.yaml
+gcloud beta app deploy --project ${YOUR_PROJECT} app_go115.yaml
 gcloud app deploy --project ${YOUR_PROJECT} queue.yaml
 ```
 
 Deploy (Go 1.16)
 
 ```console
-gcloud app deploy --project ${YOUR_PROJECT} app_go116.yaml
+gcloud beta app deploy --project ${YOUR_PROJECT} app_go116.yaml
 gcloud app deploy --project ${YOUR_PROJECT} queue.yaml
 ```
 
