@@ -29,6 +29,8 @@ jobs:
 
       - name: setup gcloud
         uses: google-github-actions/setup-gcloud@v0.2.1
+        with:
+          version: "357.0.0"
 
       - name: disable gcloud prompts
         run: gcloud config set disable_prompts true
