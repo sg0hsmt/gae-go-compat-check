@@ -131,7 +131,7 @@ func appengineHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func delayHandler(w http.ResponseWriter, r *http.Request) {
-	fn := delay.Func("delay-function", func(ctx context.Context) {
+	fn := delay.MustRegister("delay-function", func(ctx context.Context) {
 		log.Infof(ctx, "execute delay-function")
 	})
 
