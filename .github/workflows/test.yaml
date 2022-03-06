@@ -23,7 +23,7 @@ jobs:
           go-version: "1.x"
 
       - name: setup python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: "2.7.x"
 
